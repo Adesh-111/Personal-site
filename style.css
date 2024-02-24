@@ -1,0 +1,265 @@
+#intro{
+    background-color: #92C7CF;
+   
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+.intro{
+    color: antiquewhite;
+    
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.description p{
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+.myimg{
+  width: 500px;
+}
+
+@media(max-width:728px){
+  .myimg{
+    width: 300px;
+    padding-left: 50px;
+  }
+}
+
+.name,.pp,.all-list {
+    animation: 3s anim-lineUp ease-out ;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  :root {
+    --delay: 0;
+    --duration: 950ms;
+    --iterations: 1;
+  }
+  
+  
+  
+  .work,
+  .work::after {
+    animation-delay: var(--animation-delay, 2s);
+    animation-iteration-count: var(--iterations, 1);
+    animation-duration: var(--duration, 800ms);
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+  
+  .work {
+    --animation-delay: var(--delay, 0);
+    --animation-duration: var(--duration, 800ms);
+    --animation-iterations: var(--iterations, 1);
+    position: relative;
+   
+    animation-name: clip-text;
+    color: antiquewhite;
+    white-space: nowrap;
+    cursor: default;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #00A9FF;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      pointer-events: none;
+      animation-name: text-revealer;
+    }
+    
+  }
+  
+  
+  @keyframes clip-text {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  
+  @keyframes text-revealer {
+    
+    0%, 50% {
+      transform-origin: 0 50%;
+    }
+    
+    60%, 100% {
+      transform-origin: 100% 50%;   
+    }
+  
+    
+    60% {
+      transform: scaleX(1);
+    }
+    
+    100% {
+      transform: scaleX(0);
+    }
+  }
+  
+ .second-list{
+    justify-content: flex-end;
+ }
+
+ .education,.skills,.other-skills{
+  border: antiquewhite solid 5px;
+  width: 500px;
+  margin-right: 50px;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+ }
+
+ #skills{
+  background-color: #AAD7D9;
+  color: black;
+ 
+ }
+ 
+ #skills p{
+  font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+
+ .SkillsDiv li{
+  list-style: none;
+ }
+
+ .all-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+ }
+
+ .all-list h2{
+  text-align: center;
+  border-bottom: antiquewhite solid 5px;
+  padding: 10px;
+ }
+
+ .all-list p,.all-list h5,h4 {
+  padding: 5px;
+ }
+
+ @media(max-width:1120px){
+  .all-list{
+    flex-direction: column;
+    padding-left: 30px;
+  }
+
+  .education,.skills,.other-skills{
+    width: 400px;
+    
+  }
+ }
+
+ #projects{
+  background-color: #FBF9F1;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+ }
+
+ #projects h2{
+  color: #286280;
+  font-size: 50px;
+  text-align: center;
+  padding: 75px;
+  padding-top: 100px;
+ }
+
+ .WORD-GUESSING img{
+  float: left;
+  padding: 5px;
+  margin-right: 10px;
+  padding-left: 0;
+  border-radius: 10px;
+ }
+
+
+.WORD-GUESSING{
+  width: 800px;
+}
+
+.WORD-GUESSING a{
+  text-decoration: none;
+  color: black;
+}
+
+.WORD-GUESSING p{
+  font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#projects button{
+  padding: 10px;
+  background-color: #92C7CF;
+  color: antiquewhite;
+  border-color: transparent;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+#projects button:hover{
+  background-color: #286280;
+}
+
+@media(max-width:720px){
+   .WORD-GUESSING img{
+    float: none;
+    width: auto;
+   }
+
+   .WORD-GUESSING{
+    width: auto;
+   }
+  
+ }
+  
+ .Contact{
+  background-color: #E5E1DA;
+ }
